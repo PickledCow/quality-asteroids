@@ -1,0 +1,11 @@
+{
+  "name": "quality-asteroids",
+  "version": "1.0.0",
+  "title": "Quality Asteroids",
+  "author": "PickledCow",
+  "contact": "factorio@joon.id.au",
+  "factorio_version": "2.0",
+  "space_travel_required": true,
+  "dependencies": ["base >= 2.0.0", "space-age >= 1.0.0"],
+  "description": "Asteroids can spawn with varying qualities to add some additional difficulty to your space flights."
+}
