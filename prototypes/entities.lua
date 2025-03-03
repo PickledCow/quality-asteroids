@@ -115,7 +115,7 @@ for i, _ in pairs(table.deepcopy(data.raw["space-connection"])) do
                 from_quality_factor = settings.startup["quality-asteroids-"..connection.from.."-quality"].value
             end
             if settings.startup["quality-asteroids-"..connection.to.."-quality"] ~= nil then
-                to_quality_factor = settings.startup["quality-asteroids-"..connection.from.."-quality"].value
+                to_quality_factor = settings.startup["quality-asteroids-"..connection.to.."-quality"].value
             end
         end
 

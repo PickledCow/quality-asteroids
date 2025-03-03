@@ -1,10 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.1
-Date: 17. 02. 2025
+Date: 03. 03. 2025
   Bugfixes:
-    - Fixed consumption effects not showing up in tooltips.
+    - Fixed an error where incorrectly attempting to get quality value of modded planets crashed the game on startup.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.0
-Date: 17. 02. 2025
+Date: 27. 02. 2025
   Major Features:
-    - Initial Release. Eat up!
+    - Initial Release.
