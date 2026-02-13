@@ -1,11 +1,16 @@
 {
   "name": "quality-asteroids",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "title": "Quality Asteroids",
   "author": "PickledCow",
   "contact": "factorio@joon.id.au",
   "factorio_version": "2.0",
   "space_travel_required": true,
-  "dependencies": ["base >= 2.0.0", "space-age >= 1.0.0"],
+  "dependencies": [
+    "base >= 2.0.0", "space-age >= 1.0.0",
+    "(?) planet-muluna", "(?) lignumis", "(?) terrapalus", "(?) Cerys-Moon-of-Fulgora", "(?) skewer_shattered_planet", 
+    "(?) maraxsis", "(?) Moshine", "(?) Igrys", "(?) rubia", "(?) castra", "(?) planetaris-arig", "(?) pelagos", "(?) planet-arrakis",
+    "(?) planetaris-hyarion", "(?) skewer_planet_vesta", "(?) secretas", "(?) Paracelsin", "(?) tenebris-prime", "(?) corrundum", "(?) janus", "(?) dea-dia-system"
+  ],
   "description": "Asteroids can spawn with varying qualities to add some additional difficulty to your space flights."
 }

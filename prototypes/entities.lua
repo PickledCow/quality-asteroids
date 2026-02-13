@@ -7,12 +7,13 @@ for _, value in pairs(data.raw["asteroid"]) do
     value.quality_indicator_scale = 1
 end
 
-
 -- Create dummy entities that call scripts 
 for _, value in pairs(table.deepcopy(data.raw["asteroid"])) do
     local asteroid = {
         name = "quality-asteroids-"..value.name.."-dummy",
+        localised_name = {"", {"tips-and-tricks-item-name.quality"}, " ", {"entity-name."..value.name}}, -- This is a massive hack...
         type = "asteroid",
+        icon = value.icon,
         hidden = true,
         hidden_in_factoriopedia = true,
         created_effect = {
@@ -96,7 +97,6 @@ for i, _ in pairs(table.deepcopy(data.raw["planet"])) do
         data:extend({location})
     end
 end
-
 
 -- Iterate over space connections to add quality dummies
 

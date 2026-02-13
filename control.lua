@@ -1,6 +1,24 @@
+-- control.lua
 
 local asteroids = prototypes.get_entity_filtered({{ filter = "type", type = "asteroid" }})
-local qualities = { "uncommon", "rare", "epic", "legendary" }
+local qualities = {}
+
+-- An assumption is made that normal is the starting tier
+function init_qualities()
+    if settings.startup["quality-asteroids-use-modded-quality"].value then
+        -- Starts with normal quality
+        local quality_prototype = prototypes.quality["normal"]
+        local i = 1
+
+        while quality_prototype.next ~= nil do
+            quality_prototype = quality_prototype.next
+            qualities[i] = quality_prototype.name
+            i = i + 1
+        end
+    else
+        qualities = {"uncommon", "rare", "epic", "legendary"}
+    end
+end
 
 function create_asteroid(event)
     for i, _ in pairs(asteroids) do
@@ -73,4 +91,5 @@ function create_asteroid(event)
 end
 
 
+script.on_load(init_qualities)
 script.on_event(defines.events.on_script_trigger_effect, create_asteroid)
