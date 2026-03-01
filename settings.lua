@@ -3,27 +3,35 @@
 -- Base settings
 data:extend({
     {
+        type = "string-setting",
+        name = "quality-asteroids-quality-icon-size",
+        setting_type = "startup",
+        default_value = "4",
+        allowed_values = { "1", "2", "3", "4", "5", "6", "7", "8" },
+        order = "a"
+    },
+    {
         type = "double-setting",
         name = "quality-asteroids-default-quality",
         setting_type = "startup",
         default_value = 0.25,
         minimum_value = 0,
         maximum_value = 1,
-        order = "a"
+        order = "ab"
     },
     {
         type = "bool-setting",
         name = "quality-asteroids-per-planet-quality",
         setting_type = "startup",
         default_value = true,
-        order = "ab"
+        order = "ac"
     },
     {
         type = "bool-setting",
         name = "quality-asteroids-use-modded-quality",
         setting_type = "startup",
         default_value = false,
-        order = "ac"
+        order = "ad"
     },
     {
         type = "double-setting",

@@ -2,6 +2,9 @@
 
 -- These deepcopies are a bit ineffecient but it only runs once during load so idc
 
+-- Adjust the size of the quality indicator
+local icon_sizes = { 0.35, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2 }
+
 -- Double the size of the quality indicator, default 0.5
 for _, value in pairs(data.raw["asteroid"]) do
     value.quality_indicator_scale = 1
@@ -25,7 +28,8 @@ for _, value in pairs(table.deepcopy(data.raw["asteroid"])) do
                     effect_id = value.name.."-trigger"
                 }
             }
-        }
+        },
+        resistances = value.resistances -- Krastorio 2 Spaced Out requires this to exist.
     }
     data:extend({asteroid})
 end
